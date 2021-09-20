@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> http://127.0.0.1:5000/ </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+button[type=submit] {
+  background-color: #00cc66;
+  width: 75%;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("img_nature.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #e6ffe6;
+  padding: 25px;
+  position: relative;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+</head>
+
+<body>
+<div class="bg-img">
+</br>
+</br>
+
+<div class="container">
+ <form action="res.html" method="POST">
+           
+   	<h1><center>Crop Yield Prediction</center></h1></br>
+
+        <div class="row">
+            <div class="col-6"><!--left side -->
+                <div class="form-group row">
+                    <label for="fname" class="col-sm-6 col-form-label">Longitude</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="longitude" required>
+                    </div>
+                </div>
+		
+		<div class="form-group row">
+                    <label for="fname" class="col-sm-6 col-form-label">Latitude</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="latitude" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Elevation</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="elevation" required>
+                    </div>
+                </div>
+		
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Total Precipitation</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="totalprecipitation" required>
+                    </div>
+                </div>
+
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">MinMAT30</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="minmat30" required>
+                    </div>
+                </div>
+
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">MaxMAT30</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="maxmat30" required>
+                    </div>
+                </div>
+	    </div>
+
+	    <div class="col-6">
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Ratio MNDVI30</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="ratio" required>
+                    </div>
+                </div>
+
+
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Mean Wind Speed</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="meanwindspeed" required>
+                    </div>
+                </div>
+		
+                <div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Mean Temperature Difference</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="tempdiff" required>
+                    </div>
+                </div>
+
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Standard Temperature Difference</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="stempdiff" required>
+                    </div>
+                </div>
+
+		<div class="form-group row">
+                    <label for="lname" class="col-sm-6 col-form-label">Length of Day</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="LOD" required>
+                    </div>
+                </div>
+
+		<div class="form-group row">
+		    <label for="lname" class="col-sm-6 col-form-label"></label>
+                    <div class="col-sm-6">
+                                <button type="submit" class="btn">Predict</button>
+				<form action="res.html" method="POST">
+			        </div>
+                </div>
+	    </div><!--right side -->
+        </div>
+
+
+
+    </form> 
+</div>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+
+<br>
+<br>
+</div>
+<br></body>
+
+</html>
